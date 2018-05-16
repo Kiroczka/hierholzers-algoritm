@@ -124,6 +124,33 @@ heirholzers_algorithm\fast:
 	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\build
 .PHONY : heirholzers_algorithm\fast
 
+graph\Graph.obj: graph\Graph.cpp.obj
+
+.PHONY : graph\Graph.obj
+
+# target to build an object file
+graph\Graph.cpp.obj:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\graph\Graph.cpp.obj
+.PHONY : graph\Graph.cpp.obj
+
+graph\Graph.i: graph\Graph.cpp.i
+
+.PHONY : graph\Graph.i
+
+# target to preprocess a source file
+graph\Graph.cpp.i:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\graph\Graph.cpp.i
+.PHONY : graph\Graph.cpp.i
+
+graph\Graph.s: graph\Graph.cpp.s
+
+.PHONY : graph\Graph.s
+
+# target to generate assembly for a file
+graph\Graph.cpp.s:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\graph\Graph.cpp.s
+.PHONY : graph\Graph.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -151,6 +178,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\main.cpp.s
 .PHONY : main.cpp.s
 
+node\Node.obj: node\Node.cpp.obj
+
+.PHONY : node\Node.obj
+
+# target to build an object file
+node\Node.cpp.obj:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\node\Node.cpp.obj
+.PHONY : node\Node.cpp.obj
+
+node\Node.i: node\Node.cpp.i
+
+.PHONY : node\Node.i
+
+# target to preprocess a source file
+node\Node.cpp.i:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\node\Node.cpp.i
+.PHONY : node\Node.cpp.i
+
+node\Node.s: node\Node.cpp.s
+
+.PHONY : node\Node.s
+
+# target to generate assembly for a file
+node\Node.cpp.s:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\node\Node.cpp.s
+.PHONY : node\Node.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -160,9 +214,15 @@ help:
 	@echo ... heirholzers_algorithm
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... graph/Graph.obj
+	@echo ... graph/Graph.i
+	@echo ... graph/Graph.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... node/Node.obj
+	@echo ... node/Node.i
+	@echo ... node/Node.s
 .PHONY : help
 
 

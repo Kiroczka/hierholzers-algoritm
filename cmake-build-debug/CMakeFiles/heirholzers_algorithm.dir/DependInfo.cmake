@@ -4,12 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Kira/CLionProjects/hierholzers-algoritm/graph/Graph.cpp" "C:/Users/Kira/CLionProjects/hierholzers-algoritm/cmake-build-debug/CMakeFiles/heirholzers_algorithm.dir/graph/Graph.cpp.obj"
   "C:/Users/Kira/CLionProjects/hierholzers-algoritm/main.cpp" "C:/Users/Kira/CLionProjects/hierholzers-algoritm/cmake-build-debug/CMakeFiles/heirholzers_algorithm.dir/main.cpp.obj"
+  "C:/Users/Kira/CLionProjects/hierholzers-algoritm/node/Node.cpp" "C:/Users/Kira/CLionProjects/hierholzers-algoritm/cmake-build-debug/CMakeFiles/heirholzers_algorithm.dir/node/Node.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../node"
+  "../graph"
   )
 
 # Targets to which this target links.
