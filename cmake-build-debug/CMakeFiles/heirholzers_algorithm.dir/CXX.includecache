@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/edge/Edge.cpp
+iostream
+-
+Edge.h
+C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/edge/Edge.h
+
+C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/edge/Edge.h
+iostream
+-
+
 C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.cpp
 iostream
 -
@@ -13,14 +23,12 @@ stack
 -
 Graph.h
 C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.h
-vector
--
 
 C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.h
 vector
 -
-../node/Node.h
-C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/node/Node.h
+../edge/Edge.h
+C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/edge/Edge.h
 
 C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/main.cpp
 iostream
@@ -29,14 +37,4 @@ algorithm
 -
 graph/Graph.h
 C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.h
-
-C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/node/Node.cpp
-iostream
--
-Node.h
-C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/node/Node.h
-
-C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/node/Node.h
-iostream
--
 

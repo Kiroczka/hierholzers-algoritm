@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/edge/Edge.cpp" "C:/Users/Kira/CLionProjects/hierholzers-algoritm/cmake-build-debug/CMakeFiles/heirholzers_algorithm.dir/src/main/edge/Edge.cpp.obj"
   "C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.cpp" "C:/Users/Kira/CLionProjects/hierholzers-algoritm/cmake-build-debug/CMakeFiles/heirholzers_algorithm.dir/src/main/graph/Graph.cpp.obj"
   "C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/main.cpp" "C:/Users/Kira/CLionProjects/hierholzers-algoritm/cmake-build-debug/CMakeFiles/heirholzers_algorithm.dir/src/main/main.cpp.obj"
-  "C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/node/Node.cpp" "C:/Users/Kira/CLionProjects/hierholzers-algoritm/cmake-build-debug/CMakeFiles/heirholzers_algorithm.dir/src/main/node/Node.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

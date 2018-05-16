@@ -6,24 +6,30 @@ using namespace std;
 
 
 int main() {
-    Graph G(11);
-    G.addEdge(0, 1);
-    G.addEdge(1, 2);
-    G.addEdge(2, 3);
-    G.addEdge(3, 4);
-    G.addEdge(4, 5);
-    G.addEdge(5, 0);
-    G.addEdge(2, 6);
-    G.addEdge(6, 7);
-    G.addEdge(7, 8);
-    G.addEdge(8, 2);
-    G.addEdge(3, 9);
-    G.addEdge(9, 10);
-    G.addEdge(10, 3);
+    Graph graph(11);
+    graph.addEdge(0, 1);
+    graph.addEdge(1, 2);
+    graph.addEdge(2, 3);
+    graph.addEdge(3, 4);
+    graph.addEdge(4, 5);
+    graph.addEdge(5, 0);
+    graph.addEdge(2, 6);
+    graph.addEdge(6, 7);
+    graph.addEdge(7, 8);
+    graph.addEdge(8, 2);
+    graph.addEdge(3, 9);
+    graph.addEdge(9, 10);
+    graph.addEdge(10, 3);
 
+    int * degrees = graph.getDegrees();
+    for(int i=0; i<11; i++)
+        cout<<degrees[i]<<" ";
+    cout<<endl;
+
+    if(!graph.isEulerGraph()) cout<<"The Graph isn't an Euler graph"<<endl;
     auto print = [](const int &n) { std::cout << n << " "; };
 
-    vector<int> eulerCycle = G.Euler();
+    vector<int> eulerCycle = graph.getEulerCycle();
     for_each(eulerCycle.begin(), eulerCycle.end(), print);
 
     return 0;

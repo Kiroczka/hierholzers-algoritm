@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/edge/Edge.cpp">
+			<Option target="heirholzers_algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/edge/Edge.h">
+			<Option target="heirholzers_algorithm"/>
+		</Unit>
 		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.cpp">
 			<Option target="heirholzers_algorithm"/>
 		</Unit>
@@ -91,12 +97,6 @@
 			<Option target="heirholzers_algorithm"/>
 		</Unit>
 		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/main.cpp">
-			<Option target="heirholzers_algorithm"/>
-		</Unit>
-		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/node/Node.cpp">
-			<Option target="heirholzers_algorithm"/>
-		</Unit>
-		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/node/Node.h">
 			<Option target="heirholzers_algorithm"/>
 		</Unit>
 		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/CMakeLists.txt">

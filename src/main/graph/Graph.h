@@ -2,7 +2,7 @@
 // Created by Kira on 5/16/2018.
 //
 #include <vector>
-#include "../node/Node.h"
+#include "../edge/Edge.h"
 
 #ifndef HEIRHOLZERS_ALGORITHM_GRAPH_H
 #define HEIRHOLZERS_ALGORITHM_GRAPH_H
@@ -10,14 +10,18 @@
 
 class Graph
 {
-    int V;
-    Node**Edges;
+    int vertexesCount;
+    Edge**Edges;
+    int* degrees;
 public:
     Graph(int);
     ~Graph();
+    int* getDegrees();
     void addEdge(int, int);
-    vector<int> Euler();
-    bool isIsolated(int);
+    void removeEdge(int,Edge*);
+    vector<int> getEulerCycle();
+    bool isIsolatedVertex(int);
+    bool isEulerGraph();
 };
 
 #endif HEIRHOLZERS_ALGORITHM_GRAPH_H

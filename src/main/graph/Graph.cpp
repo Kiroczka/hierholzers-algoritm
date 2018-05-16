@@ -5,80 +5,96 @@
 #include <iostream>
 #include <stack>
 #include "Graph.h"
-#include <vector>
 
 using namespace std;
 
-Graph::Graph(int V)
-{
-    this->V = V;
-    Edges = new Node*[V];
-    for(int i=0; i<V; i++)
-        Edges[i] = new Node(i);
+Graph::Graph(int V) {
+    this->vertexesCount = V;
+    Edges = new Edge *[V];
+    degrees = new int[V];
+    for (int i = 0; i < V; i++){
+        Edges[i] = new Edge(i);
+        degrees[i]=0;
+    }
 }
 
-Graph::~Graph()
-{
-    for(int i=0; i<V; i++)
+Graph::~Graph() {
+    for (int i = 0; i < vertexesCount; i++)
         delete[] Edges[i];
     delete[] Edges;
 }
 
-void Graph::addEdge(int u, int v)
-{
-    Node* current = Edges[u];
-    Node* next = current->right;
-    while(next != NULL)
-    {
+void Graph::addEdge(int u, int v) {
+    Edge *current = Edges[u];
+    Edge *next = current->right;
+    while (next != nullptr) {
         current = next;
         next = current->right;
     }
-    Node* last1 = new Node(v, current, NULL);
+    Edge *last1 = new Edge(v, current, nullptr);
     current->right = last1;
 
     current = Edges[v];
     next = current->right;
-    while(next != NULL)
-    {
+    while (next != nullptr) {
         current = next;
         next = current->right;
     }
-    Node* last2 = new Node(u, current, NULL, last1);
+    Edge *last2 = new Edge(u, current, nullptr, last1);
     current->right = last2;
-    last1->jump = last2;
+    last1->oppositeDirection = last2;
+
+    degrees[u]++;
+    degrees[v]++;
 }
 
-vector<int> Graph::Euler()
-{
+vector<int> Graph::getEulerCycle() {
     vector<int> eulerCycle;
-    stack<Node*> S;
-    Node* v = Edges[0];
+    stack<Edge *> S;
+    Edge *v = Edges[0];
     eulerCycle.push_back(0);
-    Node* w;
-    while(true)
-    {
-        while(!isIsolated(v->nr))
-        {
+    Edge *w;
+    while (true) {
+        while (!isIsolatedVertex(v->vertex)) {
             w = v->right;
             S.push(v);
-            int w_nr = w->nr;
+            int w_nr = w->vertex;
             //cout << " " << '\'' << w_nr << '\'' <<" ";
-            w->remove();
+            removeEdge(v->vertex, w);
             v = Edges[w_nr];
         }
         if (S.empty())
             return eulerCycle;
-        else
-        {
-            int v_nr = S.top()->nr;
+        else {
+            int v_nr = S.top()->vertex;
             v = Edges[v_nr];
             S.pop();
-           eulerCycle.push_back(v_nr);
+            eulerCycle.push_back(v_nr);
         }
     }
 }
 
-bool Graph::isIsolated(int v)
-{
-    return Edges[v]->right == NULL;
+bool Graph::isIsolatedVertex(int v) {
+    return Edges[v]->right == nullptr;
+}
+
+bool Graph::isEulerGraph() {
+    int oddVertexesCount = 0;
+    for (int i = 0; i < vertexesCount; i++) {
+        oddVertexesCount += degrees[i] % 2;
+        if (oddVertexesCount > 2) return false;
+    }
+    if (!(oddVertexesCount == 0 || vertexesCount == 2)) return false;
+    return true;
+}
+
+void Graph::removeEdge(int startVertex, Edge *edge) {
+    degrees[startVertex]--;
+    degrees[edge->vertex]--;
+    edge->oppositeDirection->remove();
+    edge->remove();
+}
+
+int* Graph::getDegrees() {
+    return degrees;
 }

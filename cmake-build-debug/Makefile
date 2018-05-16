@@ -124,6 +124,33 @@ heirholzers_algorithm\fast:
 	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\build
 .PHONY : heirholzers_algorithm\fast
 
+src\main\edge\Edge.obj: src\main\edge\Edge.cpp.obj
+
+.PHONY : src\main\edge\Edge.obj
+
+# target to build an object file
+src\main\edge\Edge.cpp.obj:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\main\edge\Edge.cpp.obj
+.PHONY : src\main\edge\Edge.cpp.obj
+
+src\main\edge\Edge.i: src\main\edge\Edge.cpp.i
+
+.PHONY : src\main\edge\Edge.i
+
+# target to preprocess a source file
+src\main\edge\Edge.cpp.i:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\main\edge\Edge.cpp.i
+.PHONY : src\main\edge\Edge.cpp.i
+
+src\main\edge\Edge.s: src\main\edge\Edge.cpp.s
+
+.PHONY : src\main\edge\Edge.s
+
+# target to generate assembly for a file
+src\main\edge\Edge.cpp.s:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\main\edge\Edge.cpp.s
+.PHONY : src\main\edge\Edge.cpp.s
+
 src\main\graph\Graph.obj: src\main\graph\Graph.cpp.obj
 
 .PHONY : src\main\graph\Graph.obj
@@ -178,33 +205,6 @@ src\main\main.cpp.s:
 	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.s
 .PHONY : src\main\main.cpp.s
 
-src\main\node\Node.obj: src\main\node\Node.cpp.obj
-
-.PHONY : src\main\node\Node.obj
-
-# target to build an object file
-src\main\node\Node.cpp.obj:
-	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\main\node\Node.cpp.obj
-.PHONY : src\main\node\Node.cpp.obj
-
-src\main\node\Node.i: src\main\node\Node.cpp.i
-
-.PHONY : src\main\node\Node.i
-
-# target to preprocess a source file
-src\main\node\Node.cpp.i:
-	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\main\node\Node.cpp.i
-.PHONY : src\main\node\Node.cpp.i
-
-src\main\node\Node.s: src\main\node\Node.cpp.s
-
-.PHONY : src\main\node\Node.s
-
-# target to generate assembly for a file
-src\main\node\Node.cpp.s:
-	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\main\node\Node.cpp.s
-.PHONY : src\main\node\Node.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -214,15 +214,15 @@ help:
 	@echo ... heirholzers_algorithm
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... src/main/edge/Edge.obj
+	@echo ... src/main/edge/Edge.i
+	@echo ... src/main/edge/Edge.s
 	@echo ... src/main/graph/Graph.obj
 	@echo ... src/main/graph/Graph.i
 	@echo ... src/main/graph/Graph.s
 	@echo ... src/main/main.obj
 	@echo ... src/main/main.i
 	@echo ... src/main/main.s
-	@echo ... src/main/node/Node.obj
-	@echo ... src/main/node/Node.i
-	@echo ... src/main/node/Node.s
 .PHONY : help
 
 
