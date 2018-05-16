@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/heirholzers_algorithm.dir/main.cpp.obj"
-  "CMakeFiles/heirholzers_algorithm.dir/node/Node.cpp.obj"
-  "CMakeFiles/heirholzers_algorithm.dir/graph/Graph.cpp.obj"
+  "CMakeFiles/heirholzers_algorithm.dir/src/main/graph/Graph.cpp.obj"
+  "CMakeFiles/heirholzers_algorithm.dir/src/main/main.cpp.obj"
+  "CMakeFiles/heirholzers_algorithm.dir/src/main/node/Node.cpp.obj"
   "heirholzers_algorithm.pdb"
   "heirholzers_algorithm.exe"
   "heirholzers_algorithm.exe.manifest"

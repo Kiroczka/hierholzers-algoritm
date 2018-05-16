@@ -5,6 +5,7 @@
 #include <iostream>
 #include <stack>
 #include "Graph.h"
+#include <vector>
 
 using namespace std;
 
@@ -47,11 +48,12 @@ void Graph::addEdge(int u, int v)
     last1->jump = last2;
 }
 
-void Graph::Euler()
+vector<int> Graph::Euler()
 {
+    vector<int> eulerCycle;
     stack<Node*> S;
     Node* v = Edges[0];
-    cout << 0 <<" ";
+    eulerCycle.push_back(0);
     Node* w;
     while(true)
     {
@@ -65,13 +67,13 @@ void Graph::Euler()
             v = Edges[w_nr];
         }
         if (S.empty())
-            return;
+            return eulerCycle;
         else
         {
             int v_nr = S.top()->nr;
             v = Edges[v_nr];
             S.pop();
-            cout << v_nr << " ";
+           eulerCycle.push_back(v_nr);
         }
     }
 }

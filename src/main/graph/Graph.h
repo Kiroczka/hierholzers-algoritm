@@ -1,6 +1,7 @@
 //
 // Created by Kira on 5/16/2018.
 //
+#include <vector>
 #include "../node/Node.h"
 
 #ifndef HEIRHOLZERS_ALGORITHM_GRAPH_H
@@ -15,7 +16,7 @@ public:
     Graph(int);
     ~Graph();
     void addEdge(int, int);
-    void Euler();
+    vector<int> Euler();
     bool isIsolated(int);
 };
 

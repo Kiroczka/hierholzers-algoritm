@@ -3,6 +3,5 @@ project(heirholzers_algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(BEFORE node)
-include_directories( graph)
-add_executable(heirholzers_algorithm main.cpp node/Node.cpp graph/Graph.cpp)
+file(GLOB_RECURSE sources      src/main/*.cpp src/main/*.h)
+add_executable(heirholzers_algorithm ${sources})
