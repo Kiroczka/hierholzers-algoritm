@@ -11,4 +11,10 @@ CMakeFiles\heirholzers_algorithm.dir\src\main\graph\Graph.cpp.obj: ..\src\main\g
 CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj: ..\src\main\edge\Edge.h
 CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj: ..\src\main\graph\Graph.h
 CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj: ..\src\main\main.cpp
+CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj: ..\src\test\UnitTest.h
+
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj: ..\src\main\edge\Edge.h
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj: ..\src\main\graph\Graph.h
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj: ..\src\test\UnitTest.cpp
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj: ..\src\test\UnitTest.h
 

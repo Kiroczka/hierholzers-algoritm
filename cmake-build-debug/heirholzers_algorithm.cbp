@@ -99,6 +99,12 @@
 		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/main.cpp">
 			<Option target="heirholzers_algorithm"/>
 		</Unit>
+		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/test/UnitTest.cpp">
+			<Option target="heirholzers_algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/test/UnitTest.h">
+			<Option target="heirholzers_algorithm"/>
+		</Unit>
 		<Unit filename="C:/Users/Kira/CLionProjects/hierholzers-algoritm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

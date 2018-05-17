@@ -148,11 +148,42 @@ CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj.provides: CMakeFiles\
 CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj.provides.build: CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj
 
 
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj: CMakeFiles\heirholzers_algorithm.dir\flags.make
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj: ..\src\test\UnitTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Kira\CLionProjects\hierholzers-algoritm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/heirholzers_algorithm.dir/src/test/UnitTest.cpp.obj"
+	C:\PROGRA~2\MICROS~3\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj /FdCMakeFiles\heirholzers_algorithm.dir\ /FS -c C:\Users\Kira\CLionProjects\hierholzers-algoritm\src\test\UnitTest.cpp
+<<
+
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/heirholzers_algorithm.dir/src/test/UnitTest.cpp.i"
+	C:\PROGRA~2\MICROS~3\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx64\x64\cl.exe > CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Kira\CLionProjects\hierholzers-algoritm\src\test\UnitTest.cpp
+<<
+
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/heirholzers_algorithm.dir/src/test/UnitTest.cpp.s"
+	C:\PROGRA~2\MICROS~3\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.s /c C:\Users\Kira\CLionProjects\hierholzers-algoritm\src\test\UnitTest.cpp
+<<
+
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj.requires:
+
+.PHONY : CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj.requires
+
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj.provides: CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj.provides.build
+.PHONY : CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj.provides
+
+CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj.provides.build: CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj
+
+
 # Object files for target heirholzers_algorithm
 heirholzers_algorithm_OBJECTS = \
 "CMakeFiles\heirholzers_algorithm.dir\src\main\edge\Edge.cpp.obj" \
 "CMakeFiles\heirholzers_algorithm.dir\src\main\graph\Graph.cpp.obj" \
-"CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj"
+"CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj" \
+"CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj"
 
 # External object files for target heirholzers_algorithm
 heirholzers_algorithm_EXTERNAL_OBJECTS =
@@ -160,9 +191,10 @@ heirholzers_algorithm_EXTERNAL_OBJECTS =
 heirholzers_algorithm.exe: CMakeFiles\heirholzers_algorithm.dir\src\main\edge\Edge.cpp.obj
 heirholzers_algorithm.exe: CMakeFiles\heirholzers_algorithm.dir\src\main\graph\Graph.cpp.obj
 heirholzers_algorithm.exe: CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj
+heirholzers_algorithm.exe: CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj
 heirholzers_algorithm.exe: CMakeFiles\heirholzers_algorithm.dir\build.make
 heirholzers_algorithm.exe: CMakeFiles\heirholzers_algorithm.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Kira\CLionProjects\hierholzers-algoritm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable heirholzers_algorithm.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Kira\CLionProjects\hierholzers-algoritm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable heirholzers_algorithm.exe"
 	"C:\Program Files\JetBrains\CLion 2018.1.1\bin\cmake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\heirholzers_algorithm.dir --manifests  -- C:\PROGRA~2\MICROS~3\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\heirholzers_algorithm.dir\objects1.rsp @<<
  /out:heirholzers_algorithm.exe /implib:heirholzers_algorithm.lib /pdb:C:\Users\Kira\CLionProjects\hierholzers-algoritm\cmake-build-debug\heirholzers_algorithm.pdb /version:0.0  /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
@@ -175,6 +207,7 @@ CMakeFiles\heirholzers_algorithm.dir\build: heirholzers_algorithm.exe
 CMakeFiles\heirholzers_algorithm.dir\requires: CMakeFiles\heirholzers_algorithm.dir\src\main\edge\Edge.cpp.obj.requires
 CMakeFiles\heirholzers_algorithm.dir\requires: CMakeFiles\heirholzers_algorithm.dir\src\main\graph\Graph.cpp.obj.requires
 CMakeFiles\heirholzers_algorithm.dir\requires: CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.obj.requires
+CMakeFiles\heirholzers_algorithm.dir\requires: CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj.requires
 
 .PHONY : CMakeFiles\heirholzers_algorithm.dir\requires
 

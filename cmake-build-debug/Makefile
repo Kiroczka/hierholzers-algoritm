@@ -205,6 +205,33 @@ src\main\main.cpp.s:
 	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\main\main.cpp.s
 .PHONY : src\main\main.cpp.s
 
+src\test\UnitTest.obj: src\test\UnitTest.cpp.obj
+
+.PHONY : src\test\UnitTest.obj
+
+# target to build an object file
+src\test\UnitTest.cpp.obj:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.obj
+.PHONY : src\test\UnitTest.cpp.obj
+
+src\test\UnitTest.i: src\test\UnitTest.cpp.i
+
+.PHONY : src\test\UnitTest.i
+
+# target to preprocess a source file
+src\test\UnitTest.cpp.i:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.i
+.PHONY : src\test\UnitTest.cpp.i
+
+src\test\UnitTest.s: src\test\UnitTest.cpp.s
+
+.PHONY : src\test\UnitTest.s
+
+# target to generate assembly for a file
+src\test\UnitTest.cpp.s:
+	$(MAKE) -f CMakeFiles\heirholzers_algorithm.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\heirholzers_algorithm.dir\src\test\UnitTest.cpp.s
+.PHONY : src\test\UnitTest.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -223,6 +250,9 @@ help:
 	@echo ... src/main/main.obj
 	@echo ... src/main/main.i
 	@echo ... src/main/main.s
+	@echo ... src/test/UnitTest.obj
+	@echo ... src/test/UnitTest.i
+	@echo ... src/test/UnitTest.s
 .PHONY : help
 
 

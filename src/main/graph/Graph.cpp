@@ -10,64 +10,53 @@ using namespace std;
 
 Graph::Graph(int V) {
     this->vertexesCount = V;
-    Edges = new Edge *[V];
+    edges = new Edge *[V];
     degrees = new int[V];
     for (int i = 0; i < V; i++){
-        Edges[i] = new Edge(i);
+        edges[i] = new Edge(i);
         degrees[i]=0;
     }
 }
 
 Graph::~Graph() {
     for (int i = 0; i < vertexesCount; i++)
-        delete[] Edges[i];
-    delete[] Edges;
+        delete[] edges[i];
+    delete[] edges;
 }
 
 void Graph::addEdge(int u, int v) {
-    Edge *current = Edges[u];
-    Edge *next = current->right;
-    while (next != nullptr) {
-        current = next;
-        next = current->right;
-    }
-    Edge *last1 = new Edge(v, current, nullptr);
-    current->right = last1;
-
-    current = Edges[v];
-    next = current->right;
-    while (next != nullptr) {
-        current = next;
-        next = current->right;
-    }
-    Edge *last2 = new Edge(u, current, nullptr, last1);
-    current->right = last2;
-    last1->oppositeDirection = last2;
-
+    edgesPairs.push_back(make_pair(u,v));
+    Edge* newEdgeFromU = addAfterAndGetNewEdge(edges[u], v);
+    Edge* newEdgeFromV = addAfterAndGetNewEdge(edges[v], u);
+    newEdgeFromU->oppositeDirection = newEdgeFromV;
+    newEdgeFromV->oppositeDirection = newEdgeFromU;
     degrees[u]++;
     degrees[v]++;
 }
 
-vector<int> Graph::getEulerCycle() {
+vector<int> Graph::getEulerCycleStartingWith(int startVertex) {
     vector<int> eulerCycle;
     stack<Edge *> S;
-    Edge *v = Edges[0];
-    eulerCycle.push_back(0);
+    Edge *v = edges[startVertex];
+
+    if(v->right == nullptr)
+        return vector<int>();
+
+    eulerCycle.push_back(startVertex);
     Edge *w;
     while (true) {
         while (!isIsolatedVertex(v->vertex)) {
             w = v->right;
             S.push(v);
             int w_nr = w->vertex;
-            //cout << " " << '\'' << w_nr << '\'' <<" ";
             removeEdge(v->vertex, w);
-            v = Edges[w_nr];
+            v = edges[w_nr];
         }
         if (S.empty())
             return eulerCycle;
         else {
             int v_nr = S.top()->vertex;
-            v = Edges[v_nr];
+            v = edges[v_nr];
             S.pop();
             eulerCycle.push_back(v_nr);
         }
@@ -75,16 +64,15 @@ vector<int> Graph::getEulerCycle() {
 }
 
 bool Graph::isIsolatedVertex(int v) {
-    return Edges[v]->right == nullptr;
+    return edges[v]->right == nullptr;
 }
 
 bool Graph::isEulerGraph() {
     int oddVertexesCount = 0;
     for (int i = 0; i < vertexesCount; i++) {
         oddVertexesCount += degrees[i] % 2;
-        if (oddVertexesCount > 2) return false;
+        if (oddVertexesCount > 0) return false;
     }
-    if (!(oddVertexesCount == 0 || vertexesCount == 2)) return false;
     return true;
 }
 
@@ -98,3 +86,24 @@ void Graph::removeEdge(int startVertex, Edge *edge) {
 int* Graph::getDegrees() {
     return degrees;
 }
+
+Edge* Graph::addAfterAndGetNewEdge(Edge *after, int vertex) {
+    Edge *newEdge = new Edge(vertex, after, after->right);
+    if(after->right != nullptr) after ->right->left = newEdge;
+    after->right = newEdge;
+    return newEdge;
+
+}
+
+int Graph::getVertexCount() {
+    return vertexesCount;
+}
+
+int Graph::getEdgesCount() {
+    return edgesPairs.size();
+}
+
+vector<int> Graph::getEulerCycle() {
+    return getEulerCycleStartingWith(0);
+}
+

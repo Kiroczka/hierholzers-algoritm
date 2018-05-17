@@ -27,6 +27,8 @@ C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.h
 C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.h
 vector
 -
+set
+-
 ../edge/Edge.h
 C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/edge/Edge.h
 
@@ -36,5 +38,23 @@ iostream
 algorithm
 -
 graph/Graph.h
+C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.h
+../test/UnitTest.h
+C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/test/UnitTest.h
+chrono
+-
+ctime
+-
+
+C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/test/UnitTest.cpp
+UnitTest.h
+C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/test/UnitTest.h
+chrono
+-
+algorithm
+-
+
+C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/test/UnitTest.h
+../main/graph/Graph.h
 C:/Users/Kira/CLionProjects/hierholzers-algoritm/src/main/graph/Graph.h
 
